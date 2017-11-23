@@ -1,0 +1,32 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+    defaultConfig {
+        applicationId "com.dengzi.dzglide"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:25+'
+    compile files('libs/annotation-4.3.1.jar')
+    compile files('libs/compiler-4.3.1.jar')
+    compile files('libs/glide-full-4.3.1.jar')
+    compile 'com.android.support:recyclerview-v7:25+'
+    compile 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
+    compile 'com.squareup.okhttp3:okhttp:3.9.1'
+    compile files('libs/glide-okhttp3-integration-4.3.1.jar')
+    compile files('libs/glide-recyclerview-integration-4.3.1.jar')
+}
